@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --lightPink: #fff7f0;
+  --black: #121212;
+}
+
+html {
+  font-size: 24px;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+}
+
+.header.scrolled {
+  @apply py-4.5 bg-white shadow-md transition-all duration-500;
+  transition-timing-function: cubic-bezier(0.68, -1.55, 0.27, 1.55);
+}
+
+.header.scrolled .logo,
+.header.scrolled .navlink,
+.header.scrolled .menu-bar {
+  @apply text-black;
+}
+
+.header.scrolled .navlink.active,
+.navlink.active {
+  @apply text-red-400;
+}
+
+.header.scrolled .navlink:hover {
+  @apply text-red-400;
+}
+
+.mobile-menu.active {
+  @apply right-0;
+}
+
+.backToTop {
+  @apply fixed bottom-4 right-4 w-12 h-12 rounded-sm text-white text-xl
+         translate-y-6 opacity-0 pointer-events-none transition-all duration-300;
+}
+
+/* gdy aktywny - pokazujemy */
+.backToTop.active {
+  @apply translate-y-0 opacity-100 pointer-events-auto;
+}
+
+/* section padding */
+.section-padding {
+  @apply py-[30px] sm:py-[40px] md:py-[60px] lg:py-[80px] xl:py-[50px] px-[2rem] md:px-[4rem] lg:px-[6rem];
+}
+
+/* section title */
+.section-title {
+  @apply w-full lg:w-[60%] mx-auto text-center mb-16;
+}
+
+.section-heading {
+  @apply text-4xl md:text-5xl font-semibold capitalize mb-4;
+}
+
+.section-description {
+  @apply text-lg font-normal text-gray-500;
+}
+
+.footer-padding {
+  @apply py-[30px] sm:py-[40px] md:py-[60px] lg:pt-[80px] lg:pb-[50px] xl:pt-[100px] xl:pb-[50px] px-[30px] sm:px-[40px] md:px-[60px] lg:px-[80px] xl:px-[100px];
+}
+
+/* buttons */
+.btn {
+  @apply border-none outline-none cursor-pointer inline-block;
+}
+
+.primary-btn {
+  @apply py-2 px-10 bg-red-400 text-white rounded-full hover:bg-red-500 transition-all duration-500 ease-in-out;
+}
+
+/* hero */
+.hero {
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/wystruj.webp") center center no-repeat;
+  background-size: cover;
+}
+
+.tab-btn.active {
+  @apply bg-red-400 text-white;
+}
+
+.fadeIn {
+  animation: fadeInEffect 0.5s ease-in-out;
+}
+
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

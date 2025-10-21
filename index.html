@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth, text-sm sm:text-sm">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restauracja-Przykładnia</title>
+    <link rel="stylesheet" href="tailwind/output.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body class="font-[Outfit] overflow-x-hidden">
+    <header class="header fixed top-0 left-0 w-[100%] py-4 px-[2rem] sm:px-[4rem] z-50 lg:px-[8rem]">
+      <div class="header-container flex justify-between items-center">
+        <div class="header-left">
+          <a href="#" class="logo text-2xl font.semibold capitalize text-white">Przykładnia</a>
+        </div>
+        
+        <div class="header-right">
+          <nav class="navbar hidden md:block text-white">
+            <ul class="navlist flex items-center gap-6">
+              <li class="navitem"><a href="#hero" class="navlink active hover:text-red-400 text-base font-normal capitalize transition-all duration-500 ease-in-out">Strona Główna</a></li>
+              <li class="navitem"><a href="#about" class="navlink hover:text-red-400 text-base font-normal capitalize transition-all duration-500 ease-in-out">O nas</a></li>
+              <li class="navitem"><a href="#menu" class="navlink hover:text-red-400 text-base font-normal capitalize transition-all duration-500 ease-in-out">Menu</a></li>
+              <li class="navitem"><a href="#reservation" class="navlink hover:text-red-400 text-base font-normal capitalize transition-all duration-500 ease-in-out">Rezerwacja</a></li>
+              <li class="navitem"><a href="#contact" class="navlink hover:text-red-400 text-base font-normal capitalize transition-all duration-500 ease-in-out">Kontakt</a></li>
+            </ul>
+          </nav>
+          
+          <nav class="mobile-menu md:hidden fixed top-0 right-[-100%] w-[100%] sm:w-[50%] h-[100%] px-4 py-12 bg-white z-20 shadow--lg overflow-hidden transition-all duration-500 ease-in-out">
+            <span class="close absolute top-2 right-2 text-3xl [text-red-500 cursor-pointer]">
+              <i class="fa-solid fa-xmark"></i>
+            </span>
+            <ul class="navlist flex flex-col items-center gap-6">
+              <li><a href="#hero" class="hover:text-red-400 text-2xl capitalize transition-all duration-500">Strona Główna</a></li>
+              <li><a href="#about" class="hover:text-red-400 text-2xl capitalize transition-all duration-500">O nas</a></li>
+              <li><a href="#menu" class="hover:text-red-400 text-2xl capitalize transition-all duration-500">Menu</a></li>
+              <li><a href="#reservation" class="hover:text-red-400 text-2xl capitalize transition-all dura/tion-500">Rezerwacja</a><li>
+              <li><a href="#contact" class="hover:text-red-400 text-2xl capitalize transition-all duration-500">Kontakt</a></li>
+            </ul>
+          </nav>
+          
+          <div class="menu-bar md:hidden">
+            <i class="fa-solid fa-bars-staggered"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section hero section-padding w-full h-screen bg-[#f9f9f9] flex flex-col justify-center items-center" id="hero">
+        <div class="hero-content text-center w-full max-w-md sm:max-w-xl lg:max-w-2xl mx-auto" data-aos="fade-up">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold capitalize mb-2 text-white">Witaj w <span class="text-red-400 font-bold">Przykładni!</span></h1>
+          <p class="text-lg font-normal text-white">
+            Skosztuj dań, które przekroczą Twoje oczekiwania - dań przygotowywanych ręcznie z miłością i najlepszymi składnikami
+          </p>
+          <a href="#" class="btn primary-btn mt-2">Zobacz Menu</a>
+        </div>
+      </section>
+    </main>
+      
+      <section class="section chefs-picks section-padding" id="chefs-picks">
+        <div class="w-full lg:w-[60%] mx-auto text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl md:text-5xl font-semibold capitalize mb-4">Dania szefa kuchni</h2>
+          <p class="text-gray-500">Odkryj najpyszniejsze dania przygotowywane z pasją, świeżością i wyrazistym smakiem.</p>
+          <p class="text-lg font-normal"></p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center" data-aos="fade-up">
+          <div class="card w-full h-auto flex flex-col [@media(min-width:1750px)]:flex-row [@media(min-width:1750px)]:items-start gap-4 [@media(min-width:1750px)]:gap-5">
+            <img src="images/special1.jpg" alt="Grilled Lemon Salmon" class="w-full h-60 object-cover rounded-xl shadow-lg mb-4 [@media(min-width:1750px)]:w-60 [@media(min-width:1750px)]:h-60 [@media(min-width:1750px)]:mb-0 flex-shrink-0" />
+            <div class="bg-white shadow-lg rounded-lg py-4 px-3 flex flex-col justify-center flex-1 [@media(min-width:1750px)]:min-h-60 min-h-0">
+              <p class="text-sm text-red-400 uppercase mb-2 tracking-widest">SEAFOOD</p>
+              <h3 class="text-xl font-bold mb-2">Grilowany Łosoś</h3>
+              <p class="text-gray-500 mb-4 font-normal">Idealnie grillowany łosoś ze skórką cytrynową i pieczonymi warzywami.</p>
+              <a href="#" class="btn text-base font-medium hover:text-red-400 transition">Zobacz Więcej</a>
+            </div>
+          </div>
+          <div class="card w-full h-auto flex flex-col [@media(min-width:1750px)]:flex-row [@media(min-width:1750px)]:items-start gap-4 [@media(min-width:1750px)]:gap-5">
+            <img src="images/special2.jpg" alt="Grilled Lemon Salmon" class="w-full h-60 object-cover rounded-xl shadow-lg mb-4 [@media(min-width:1750px)]:w-60 [@media(min-width:1750px)]:h-60 [@media(min-width:1750px)]:mb-0 flex-shrink-0" />
+            <div class="bg-white shadow-lg rounded-lg py-4 px-3 flex flex-col justify-center flex-1 [@media(min-width:1750px)]:min-h-60 min-h-0">
+              <p class="text-sm text-red-400 uppercase mb-2 tracking-widest">ITALIAN</p>
+              <h3 class="text-xl font-bold mb-2">Makaron Primavera</h3>
+              <p class="text-gray-500 mb-4 font-normal">Klasyczny makaron polany oliwą z oliwek z sezonowymiwarzywami i ziołami.</p>
+              <a href="#" class="btn text-base font-medium hover:text-red-400 transition">Zobacz Więcej</a>
+            </div>
+          </div>
+          <div class="card w-full h-auto flex flex-col [@media(min-width:1750px)]:flex-row [@media(min-width:1750px)]:items-start gap-4 [@media(min-width:1750px)]:gap-5">
+            <img src="images/special3.jpg" alt="Grilled Lemon Salmon" class="w-full h-60 object-cover rounded-xl shadow-lg mb-4 [@media(min-width:1750px)]:w-60 [@media(min-width:1750px)]:h-60 [@media(min-width:1750px)]:mb-0 flex-shrink-0" />
+            <div class="bg-white shadow-lg rounded-lg py-4 px-3 flex flex-col justify-center flex-1 [@media(min-width:1750px)]:min-h-60 min-h-0">
+              <p class="text-sm text-red-400 uppercase mb-2 tracking-widest">AMERICAN</p>
+              <h3 class="text-xl font-bold mb-2">Burger Wołowy</h3>
+              <p class="text-gray-500 mb-4 font-normal">Burger wołowy z serem cheddar, sałatą, pomidorem i naszym sosem.</p>
+              <a href="#" class="btn text-base font-medium hover:text-red-400 transition">Zobacz Więcej</a>
+            </div>
+          </div>
+          <div class="card w-full h-auto flex flex-col [@media(min-width:1750px)]:flex-row [@media(min-width:1750px)]:items-start gap-4 [@media(min-width:1750px)]:gap-5">
+            <img src="images/special4.jpg" alt="Grilled Lemon Salmon" class="w-full h-60 object-cover rounded-xl shadow-lg mb-4 [@media(min-width:1750px)]:w-60 [@media(min-width:1750px)]:h-60 [@media(min-width:1750px)]:mb-0 flex-shrink-0" />
+            <div class="bg-white shadow-lg rounded-lg py-4 px-3 flex flex-col justify-center flex-1 [@media(min-width:1750px)]:min-h-60 min-h-0">
+              <p class="text-sm text-red-400 uppercase mb-2 tracking-widest">DESSERT</p>
+              <h3 class="text-xl font-bold mb-2">Ciasto Czekoladowe</h3>
+              <p class="text-gray-500 mb-4 font-normal">Ciepłe ciasto czekoladowe z, płynną czekoladą w środku podawane z lodami waniliowymi.</p>
+              <a href="#" class="btn text-base font-medium hover:text-red-400 transition">Zobacz Więcej</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about section-padding bg-gray-100 overflow-x-hidden" id="about">
+        <div class="about-content grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <!-- left side: image -->
+          <div class="w-full h-full"><img src="images/special1.jpg" about image class="w-full h-full object-cover rounded-xl shadow-xl" data-aos="fade-right" /></div>
+
+          <!-- right side: text -->
+          <div class="w-full lg:max-w-2xl mx-auto" data-aos="fade-left">
+            <small class="inline-block text-sm uppercase tracking-widest text-red-400 mb-3">Nasza historia</small>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800 capitalize leading-[1.1]">Wykonane z pasją, doskonale podane</h2>
+            <p class="text-gray-600 text-lg mb-6">W <span class="font-semibold text-black capitalize">Przykładni</span>, Łączymy tradycyjne techniki z nowoczesnym stylem. Od pozyskiwania najświeższych składników po tworzenie wyrazistych, niezapomnianych smaków — zależy nam na tym, aby zapewnić Ci ciepłe, przyjazne i głęboko satysfakcjonujące doznania kulinarne.</p>
+
+            <p class="text-gray-600 text-lg mb-6">Niezależnie od tego, czy jest to romantyczna kolacja, czy nieformalny lunch ze znajomymi, każde serwowane przez nas danie jest zaprojektowane tak, aby tworzyć trwałe wspomnienia.</p>
+
+            <a href="#menu" class="btn primary-btn">Poznaj nasze menu</a>
+          </div>
+        </div>
+      </section>
+      <section class="section gallery section-padding" id="gallery">
+        <div class="section-title text-center mb-8">
+          <h2 class="section-heading text-4xl font-bold">Nasza Galeria</h2>
+          <p class="section-description text-gray-600">Zobacz na przepyszne dania, które serwujemy każdego dnia w Przykładni.</p>
+        </div>
+
+        <!-- content -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center" data-aos="fade-up">
+          <div class="overflow-hidden rounded-xl shadow-lg group w-full h-60 col-span-1 lg:col-span-2">
+            <img src="images/gallery1.jpg" alt="gallery 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="overflow-hidden rounded-xl shadow-lg group col-span-1 md:row-span-2">
+            <img src="images/gallery2.jpg" alt="gallery 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="overflow-hidden rounded-xl shadow-lg group">
+            <img src="images/gallery3.jpg" alt="gallery 3" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="overflow-hidden rounded-xl shadow-lg group">
+            <img src="images/gallery4.jpg" alt="gallery 4" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="overflow-hidden rounded-xl shadow-lg group">
+            <img src="images/gallery5.jpg" alt="gallery 5" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+          <div class="overflow-hidden rounded-xl shadow-lg group col-span-1 md:col-span-2">
+            <img src="images/gallery6.jpg" alt="gallery 6" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+          </div>
+        </div>
+      </section>
+      <section class="section menu bg-gray-100 section-padding" id="menu" >
+        <div class="section-title" data-aos="fade-up">
+          <h2 class="section-heading">Nasze Menu</h2>
+          <p class="section-description">Poznaj ulubione dania naszych klijentów.</p>
+        </div>
+
+        <div class="tab-btns flex flex-wrap items-center justify-center gap-6 mb-16" data-aos="fade-up">
+          <button class="btn tab-btn px-5 py-3 bg-gray-200/50 rounded-full active hover:bg-red-400 transition" data-category="all">Wszystko</button>
+          <button class="btn tab-btn px-5 py-3 bg-gray-200/50 rounded-full hover:bg-red-400 transition" data-category="breakfast">Śniadanie</button>
+          <button class="btn tab-btn px-5 py-3 bg-gray-200/50 rounded-full hover:bg-red-400 transition" data-category="launch">Lunch</button>
+          <button class="btn tab-btn px-5 py-3 bg-gray-200/50 rounded-full hover:bg-red-400 transition" data-category="dinner">Kolacja</button>
+        </div>
+
+        <!-- tab content: menu grid -->
+        <div class="menu-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center" data-aos="fade-up">
+          <!-- menu item -->
+          <div class="menu-card bg-white rounded-xl shadow-lg overflow-hidden group transition" data-category="breakfast">
+            <img src="images/menu1.jpg" alt="menu 1" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="text-xl font-semibold capitalize">Bruschetta</h3>
+                <span class="text-red-400 font-bold text-lg">65 zł</span>
+              </div>
+              <p class="text-red-400 uppercase mb-2">Starter</p>
+              <p class="text-gray-600 font-normal">Churupiący przypieczony chleb z czosnkiem, pomidorami, bazylią i oliwą z oliwek.</p>
+            </div>
+          </div>
+
+          <div class="menu-card bg-white rounded-xl shadow-lg overflow-hidden group transition" data-category="breakfast">
+            <img src="images/menu2.jpg" alt="menu 2" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="text-xl font-semibold capitalize">Faszerowane pieczarki</h3>
+                <span class="text-red-400 font-bold text-lg">50 zł</span>
+              </div>
+              <p class="text-red-400 uppercase mb-2">Starter</p>
+              <p class="text-sm text-gray-600 font-normal">Pieczarki nadziewane ziołowym serkiem śmietankowym, pieczone do uzyskania złotego koloru.</p>
+            </div>
+          </div>
+
+          <div class="menu-card bg-white rounded-xl shadow-lg overflow-hidden group transition" data-category="dinner">
+            <img src="images/menu3.jpg" alt="menu 3" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="text-xl font-semibold capitalize">Grilowany kurczak</h3>
+                <span class="text-red-400 font-bold text-lg">35 zł</span>
+              </div>
+              <p class="text-sm text-red-400 uppercase mb-2">Starter</p>
+              <p class="text-sm text-gray-600 font-normal">Makaron fettuccine z grillowanym kurczakiem, pieczarkami i parmezanem.</p>
+            </div>
+          </div>
+
+          <div class="menu-card bg-white rounded-xl shadow-lg overflow-hidden group transition" data-category="launch">
+            <img src="images/menu4.jpg" alt="menu 4" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="text-xl font-semibold capitalize">Paneer Tikka Masala</h3>
+                <span class="text-red-400 font-bold text-lg">45 zł</span>
+              </div>
+              <p class="text-sm text-red-400 uppercase mb-2">Danie główne</p>
+              <p class="text-sm text-gray-600 font-normal">Delikatny ser paneer w kremowym sosie tikka podawany z naanem lub gotowanym ryżem.</p>
+            </div>
+          </div>
+
+          <div class="menu-card bg-white rounded-xl shadow-lg overflow-hidden group transition" data-category="launch">
+            <img src="images/menu5.jpg" alt="menu 5" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="text-xl font-semibold capitalize">Tiramisu</h3>
+                <span class="text-red-400 font-bold text-lg">35 zł</span>
+              </div>
+              <p class="text-sm text-red-400 uppercase mb-2">Deser</p>
+              <p class="text-sm text-gray-600 font-normal">Klasyczne włoskie warstwy biszkoptów nasączonych espresso i kremowego mascarpone.</p>
+            </div>
+          </div>
+
+          <div class="menu-card bg-white rounded-xl shadow-lg overflow-hidden group transition" data-category="dinner">
+            <img src="images/menu6.jpg" alt="menu 6" class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-1">
+                <h3 class="text-xl font-semibold capitalize">Czekoladowe ciasto z płynnym środkiem</h3>
+                <span class="text-red-400 font-bold text-lg">85 zł</span>
+              </div>
+              <p class="text-sm text-red-400 uppercase mb-2">Deser</p>
+              <p class="text-sm text-gray-600 font-normal">Czekoladowe ciasto z płynnym środkiem podawane z lodami waniliowymi.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section services section-padding" id="services">
+        <!-- section heading -->
+        <div class="section-title" data-aos="fade-up">
+          <h2 class="section-heading">Nasze usługi</h2>
+          <p class="section-description">Serwujemy nie tylko jedzenie — dostarczamy doświadczenie, komfort i troskę.</p>
+        </div>
+      
+        <!-- services grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-center" data-aos="fade-up">
+          <!-- services card -->
+          <div class="card bg-gray-100 p-8 rounded-xl shadow-md hover:shadow-xl transition duration-500">
+            <div class="text-red-400 text-4xl mb-4">
+              <i class="fa-solid fa-utensils"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 capitalize">Doświadczenie w lokalu</h3>
+            <p class="text-gray-600 font-normal text-1g">Quos. Quam vitae libero, sequi excepturi perferendis praesentium corrupti delectus?</p>
+          </div>
+      
+          <div class="card bg-gray-100 p-8 rounded-xl shadow-md hover:shadow-xl transition duration-500">
+            <div class="text-red-400 text-4xl mb-4">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 capitalize">Szybka dostawa</h3>
+            <p class="text-gray-600 font-normal text-1g">Quos. Quam vitae libero, sequi excepturi perferendis praesentium corrupti delectus?</p>
+          </div>
+      
+          <div class="card bg-gray-100 p-8 rounded-xl shadow-md hover:shadow-xl transition duration-500">
+            <div class="text-red-400 text-4xl mb-4">
+              <i class="fa-solid fa-bell-concierge"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 capitalize">Rezerwacje online</h3>
+            <p class="text-gray-600 font-normal text-1g">Quos. Quam vitae libero, sequi excepturi perferendis praesentium corrupti delectus?</p>
+          </div>
+      
+          <div class="card bg-gray-100 p-8 rounded-xl shadow-md hover:shadow-xl transition duration-500">
+            <div class="text-red-400 text-4xl mb-4">
+              <i class="fa-solid fa-cake-candles"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 capitalize">Obsługa cateringowa na wydarzenia</h3>
+            <p class="text-gray-600 font-normal text-1g">Quos. Quam vitae libero, sequi excepturi perferendis praesentium corrupti delectus?</p>
+          </div>
+      
+          <div class="card bg-gray-100 p-8 rounded-xl shadow-md hover:shadow-xl transition duration-500">
+            <div class="text-red-400 text-4xl mb-4">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 capitalize">Opcje wegańskie i zdrowe</h3>
+            <p class="text-gray-600 font-normal text-1g">Quos. Quam vitae libero, sequi excepturi perferendis praesentium corrupti delectus?</p>
+          </div>
+      
+          <div class="card bg-gray-100 p-8 rounded-xl shadow-md hover:shadow-xl transition duration-500">
+            <div class="text-red-400 text-4xl mb-4">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 capitalize">Bezpłatne Wi-Fi i wygoda</h3>
+            <p class="text-gray-600 font-normal text-1g">Quos. Quam vitae libero, sequi excepturi perferendis praesentium corrupti delectus?</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section chefs section-padding bg-gray-100" id="chefs" data-aos="fade-up">
+        <!-- heading -->
+        <div class="section-title" data-aos="fade-up">
+          <h2 class="section-heading">Poznaj naszych mistrzów kuchni</h2>
+          <p class="section-description">Pasjonaci kulinariów stojący za każdym pysznym daniem, które serwujemy.</p>
+        </div>
+
+        <!-- chefs grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10 justify-center" data-aos="fade-up">
+          <!-- chef card -->
+          <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-xl transition group">
+            <div class="w-full h-130 overflow-hidden">
+              <img src="images/chef1.jpg" alt="chef1" class="w-full h-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-1 capitalize text-black">Szef kuchni Luca Romano</h3>
+              <p class="text-red-400 font-medium text-sm mb-2 uppercase">Specjalista kuchni włoskiej</p>
+              <p class="text-gray-600 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officiis quia.</p>
+            </div>
+          </div>
+          <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-xl transition group">
+            <div class="w-full h-130 overflow-hidden">
+              <img src="images/chef2.jpg" alt="chef1" class="w-full h-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-1 capitalize text-black">Szef kuchni Luca Romano</h3>
+              <p class="text-red-400 font-medium text-sm mb-2 uppercase">Specjalista kuchni włoskiej</p>
+              <p class="text-gray-600 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officiis quia.</p>
+            </div>
+          </div>
+          <div class="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-xl transition group">
+            <div class="w-full h-130 overflow-hidden">
+              <img src="images/chef3.jpg" alt="chef1" class="w-full h-full object-cover transition duration-300 group-hover:scale-105" />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-1 capitalize text-black">Szef kuchni Luca Romano</h3>
+              <p class="text-red-400 font-medium text-sm mb-2 uppercase">Specjalista kuchni włoskiej</p>
+              <p class="text-gray-600 font-normal text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos officiis quia.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section reservation section-padding bg-[#fff]" id="reservation">
+        <!-- heading -->
+        <div class="section-title" data-aos="fade-up">
+          <h2 class="section-heading">Zarezerwuj stolik</h2>
+          <p class="section-description">Ciesz się wykwintnymi doznaniami kulinarnymi — zarezerwuj stolik z wyprzedzeniem.</p>
+        </div>
+
+        <!-- content: form container -->
+        <div class="w-full md:max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md" data-aos="fade-up">
+          <form action="" class="reservation_form grid grid-cols-1 md:grid-cols-2 gap-6" id="reservation_form">
+            <!-- name -->
+            <div class="col-span-1">
+              <label for="reservation_name" class="block mb-2 text-sm font-medium text-gray-700 capitalize"> Imię i nazwisko: </label>
+              <input type="text" name="reservation_name" class="reservation_name w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400" id="reservation_name" required />
+            </div>
+
+            <!-- email -->
+            <div class="col-span-1">
+              <label for="reservation_email" class="block mb-2 text-sm font-medium text-gray-700 capitalize"> Email: </label>
+              <input type="email" name="reservation_email" class="reservation_email w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400" id="reservation_email" required />
+            </div>
+
+            <div class="col-span-1">
+              <label for="reservation_phone" class="block mb-2 text-sm font-medium text-gray-700 capitalize"> Numer telefonu: </label>
+              <input type="tel" name="reservation_phone" class="reservation_phone w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400" id="reservation_date" required />
+            </div>
+
+            <div class="col-span-1">
+              <label for="reservation_time" class="block mb-2 text-sm font-medium text-gray-700 capitalize"> Data: </label>
+              <input type="date" name="reservation_date" class="reservation_date w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400" id="reservation_time" required />
+            </div>
+
+            <div class="col-span-1">
+              <label for="reservation_time" class="block mb-2 text-sm font-medium text-gray-700 capitalize"> Godzina: </label>
+              <input type="time" name="reservation_time" class="reservation_time w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400" id="reservation_time" required />
+            </div>
+
+            <div class="col-span-1">
+              <label for="reservation_guests" class="block mb-2 text-sm font-medium text-gray-700 capitalize"> Goście: </label>
+              <input type="number" min="1" max="20" name="reservation_guests" class="reservation_guests w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400" id="reservation_guest" required />
+            </div>
+
+            <div class="col-span-1 md:col-span-2">
+              <label for="reservation_message" class="block mb-2 text-sm font-medium [text-gray-700 capitalize">Dodatkowe uwagi :</label>
+              <textarea name="reservation_message" id="reservation_message" class="reservation_message w-full h-40 border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-400"" placeholder="Specjalne życzenia"></textarea>
+            </div>
+
+            <div class="col-span-1 md:col-span-2 text-center">
+              <button class="btn bg-red-400 hover:bg-red-500 transition text-white font-medium px-15 py-3 rounded-full">Zarezerwuj teraz</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="section testimonials section-padding bg-gray-100" id="testimonials">
+        <!-- heading -->
+        <div class="section-title" data-aos="fade-up">
+          <h2 class="section-heading">Co mówią nasi goście</h2>
+          <p class="section-description">Prawdziwe historie od osób, które spróbowały różnicy Przykładni.</p>
+        </div>
+      
+        <!-- content: testimonials cards -->
+        <div class="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 justify-center" data-aos="fade-up">
+          <!-- card -->
+          <div class="w-full bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition duration-500">
+            <div class="flex items-center gap-4 mb-6">
+              <img src="images/user1.jpg" alt="user 1" class="w-20 h-20 object-cover rounded-full">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-lg font-semibold capitalize text-black">Kacper</h3>
+                <small class="text-sm font-normal capitalize text-gray-500">Właściciel firmy</small>
+              </div>
+            </div>
+            
+            <p class="text-base font-normal text-gray-600 italic"><span class="text-red-400 text-xl mr-1"><i class="fa-solid fa-quote-left"></i></span>
+              Quos. Quam vitae libero, sequi excepturi perferendis praesentium corrupti delectus?</p>
+            </p>
+          </div>
+
+          <div class="w-full bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition duration-500">
+            <div class="flex items-center gap-4 mb-6">
+              <img src="images/user2.jpg" alt="user 1" class="w-20 h-20 object-cover rounded-full">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-lg font-semibold capitalize text-black">Dawid</h3>
+                <small class="text-sm font-normal capitalize text-gray-500">Turysta</small>
+              </div>
+            </div>
+            
+            <p class="text-base font-normal text-gray-600 italic"><span class="text-red-400 text-xl mr-1"><i class="fa-solid fa-quote-left"></i></span>
+              Quos. Quam vitae libero, sequi excepturi perferendis praesentium corrupti delectus?</p>
+            </p>
+          </div>
+
+          <div class="w-full bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition duration-500">
+            <div class="flex items-center gap-4 mb-6">
+              <img src="images/user3.jpg" alt="user 1" class="w-20 h-20 object-cover rounded-full">
+              <div class="flex flex-col gap-1">
+                <h3 class="text-lg font-semibold capitalize text-black">Marcin</h3>
+                <small class="text-sm font-normal capitalize text-gray-500">Lokalny miesszkaniec</small>
+              </div>
+            </div>
+            
+            <p class="text-base font-normal text-gray-600 italic"><span class="text-red-400 text-xl mr-1"><i class="fa-solid fa-quote-left"></i></span>
+              Quos. Quam vitae libero, sequi excepturi perferendis praesentium corrupti delectus?</p>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section contact section-padding" id="contact" >
+        <!-- heading -->
+        <div class="section-title" data-aos="fade-up">
+          <h2 class="section-heading">Skontaktuj się z nami</h2>
+          <p class="section-description">Chętnie usłyszymy od Ciebie! Skontaktuj się z nami w sprawie pytań, opinii lub rezerwacji.</p>
+        </div>
+      
+        <!-- content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 w-full lg:max-w-6xl mx-auto" data-aos="fade-up">
+          <!-- left content: contact info -->
+          <div class="bg-white p-8 rounded-xl shadow-md">
+            <h3 class="text-2xl font-semibold mb-4 capitalize">Dane kontaktowe</h3>
+            <p class="text-gray-600 mb-6">Skontaktuj się z nami telefonicznie, mailowo lub odwiedź naszą lokalizację.</p>
+      
+            <div class="space-y-4 text-gray-700-mb-6">
+              <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-location-dot"></i></span>
+                <p>123 Przykładnia, Kraków, Polska </p>
+              </div>
+              <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-phone-volume"></i></span>
+                <p>+91 0123456789</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-envelope"></i></span>
+                <p>support@Przykładnia.com</p>
+              </div>
+            </div>
+            
+            
+            <div class="w-full h-60">
+              <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d276051.93803686963!2d20.01363342031659!3d49.998039104845105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471644c0354e18d1%3A0xb46bb6b576478abf!2zS3Jha8Ozdw!5e0!3m2!1spl!2spl!4v1760468286672!5m2!1spl!2spl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+          </div>
+            
+          <div class="bg-white p-8 rounded-xl shadow-md">
+         <form action="" class="contact_form space-y-6" id="contact_form">
+           
+           <div>
+             <label for="contact_fullname" class="block text-sm font-medium text-gray-700 mb-1 capitalize">Twoje imię:</label>
+             <input type="text" placeholder="Wpisz swoje imię" id="contact_fullname" class="contact_fullname w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400" required/>
+           </div>
+       
+           <div>
+             <label for="contact_email" class="block text-sm font-medium text-gray-700 mb-1 capitalize">Twój email:</label>
+             <input type="email" placeholder="Wpisz swój email" id="contact_email" class="contact_email w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-red-400"required/>
+           </div>
+       
+           <div>
+             <label for="contact_message" class="block text-sm font-medium text-gray-700 mb-1 capitalize">Wiadomość:</label>
+             <textarea name="contact_message" id="contact_message" placeholder="Twoja wiadomość..." class="w-full h-40 px-4 py-3 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-red-400"required></textarea>
+           </div>
+       
+           <div>
+             <button 
+               type="submit" 
+               class="btn bg-red-400 hover:bg-red-500 text-white font-medium px-8 py-3 rounded-md transition duration-500">Wyślij wiadomość</button>
+           </div>
+       
+         </form>
+        </div>
+      </section>
+      <footer class="footer bg-[var(--black)] footer-padding">
+        <!-- footer content -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 justify-center w-full mx-auto">
+          <!-- logo + about -->
+          <div class="w-full">
+            <h3 class="text-2xl font-semibold text-white mb-4 capitalize">Przykładnia</h3>
+            <p class="text-base leading-relaxed text-gray-300 mb-4">Smak poza oczekiwaniami. Przykładnia to Twoje idealne miejsce na</p>
+      
+            <!-- social icons -->
+            <div class="flex items-center mt-4 gap-4">
+              <a href="#" class="w-10 h-10 bg-gray-200/90 flex items-center justify-center text-xl text-red-400 rounded-sm hover:bg-red-400 hover: text-white transition duration-"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="w-10 h-10 bg-gray-200/90 flex items-center justify-center text-xl text-red-400 rounded-sm hover:bg-red-400 hover: text-white transition duration-"><i class="fa-brands fa-x"></i></a>
+              <a href="#" class="w-10 h-10 bg-gray-200/90 flex items-center justify-center text-xl text-red-400 rounded-sm hover:bg-red-400 hover: text-white transition duration-"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" class="w-10 h-10 bg-gray-200/90 flex items-center justify-center text-xl text-red-400 rounded-sm hover:bg-red-400 hover: text-white transition duration-"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+          
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4 capitalize">Szybkie linki</h4>
+            <ul class="space-y-2">
+              <li class="text-base capitalize text-gray-300"><a href="#hero" class="hover:text-red-400 transition duration-500">strona główna</a></li>
+              <li class="text-base capitalize text-gray-300"><a href="#about" class="hover:text-red-400 transition duration-500">o nas</a></li>
+              <li class="text-base capitalize text-gray-300"><a href="#menu" class="hover:text-red-400 transition duration-500">menu</a></li>
+              <li class="text-base capitalize text-gray-300"><a href="#services" class="hover:text-red-400 transition duration-500">usługi</a></li>
+              <li class="text-base capitalize text-gray-300"><a href="#reservation" class="hover:text-red-400 transition duration-500">rezerwacje</a></li>
+              <li class="text-base capitalize text-gray-300"><a href="#contact" class="hover:text-red-400 transition duration-500">kontakt</a></li></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 class="text-lg font-semibold text-white mb-4 capitalize">Kontakt</h4>
+            <ul class="space-y-2">
+              <li class="text-base capitalize text-gray-300 flex items-center gap-3"><i class="text-red-400 fa-solid fa-location-dot"></i> 123 Przykładnia, Kraków, Polska</li>
+              <li class="text-base capitalize text-gray-300 flex items-center gap-3"><i class="text-red-400 fa-solid fa-phone-volume"></i> +910123456789</li>
+              <li class="text-base capitalize text-gray-300 flex items-center gap-3"><i class="text-red-400 fa-solid fa-envelope"></i> support@Przykładnia.com</li>
+            </ul>
+          </div>
+        </div>
+
+          <div class="border-t border-gray-500/90 mt-10 pt-8 text-center text-base text-gray-500">
+            <p>&copy; 2025 Przykładnia. Wszelkie prawa zastrzeżone - Stworzone przez <span class="text-red-400">2krzysztofgajewski@gmail.com</span></p>
+          </div>
+      </footer>
+
+      <button class="btn backToTop fixed bottom-2 right-1 w-12 h-12 bg-red-400 rounded-sm text-white text-xl"><i class="fa-solid fa-arrow-turn-up"></i></button> 
+
+    <script src="main.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+  </body>
+</html>
