@@ -51,17 +51,19 @@
       </div>
     </header>
     <main>
-      <section class="section hero section-padding w-full h-screen bg-[#f9f9f9] flex flex-col justify-center items-center" id="hero">
-        <div class="hero-content text-center w-full max-w-md sm:max-w-xl lg:max-w-2xl mx-auto" data-aos="fade-up">
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold capitalize mb-2 text-white">Witaj w <span class="text-red-400 font-bold">Przykładni!</span></h1>
-          <p class="text-lg font-normal text-white">
-            Skosztuj dań, które przekroczą Twoje oczekiwania - dań przygotowywanych ręcznie z miłością i najlepszymi składnikami
-          </p>
-          <a href="#" class="btn primary-btn mt-2">Zobacz Menu</a>
+      <section id="hero" class="relative w-full h-screen overflow-hidden">
+        <img src="images/wystruj.webp" alt="Tło: wystrój restauracji"  class="absolute inset-0 w-full h-full object-cover object-center" aria-hidden="true" />
+        <div class="absolute inset-0 pointer-events-none z-10" style="background: linear-gradient(to bottom right, rgba(0,0,0,0.7), rgba(0,0,0,0.7));" ></div>
+        <div class="relative z-10 section-padding flex flex-col justify-center items-center h-full text-center">
+          <div class="hero-content w-full max-w-md sm:max-w-xl lg:max-w-2xl" data-aos="fade-up">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-semibold capitalize mb-2 text-white">Witaj w <span class="text-red-400 font-bold">Przykładni!</span></h1>
+            <p class="text-lg font-normal text-white max-w-2xl mx-auto">Skosztuj dań, które przekroczą Twoje oczekiwania - dań przygotowywanych ręcznie z miłością i najlepszymi składnikami</p>
+            <a href="#" class="btn primary-btn mt-6">Zobacz Menu</a>
+          </div>
         </div>
       </section>
     </main>
-      
+
       <section class="section chefs-picks section-padding" id="chefs-picks">
         <div class="w-full lg:w-[60%] mx-auto text-center mb-16" data-aos="fade-up">
           <h2 class="text-4xl md:text-5xl font-semibold capitalize mb-4">Dania szefa kuchni</h2>
